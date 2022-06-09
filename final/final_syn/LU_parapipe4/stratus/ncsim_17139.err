@@ -1,0 +1,60 @@
+csi-ncsim - CSI: Command line:
+ncsim
+    -f /home/u107/u107061125/ee6470/final_syn/LU_para4/stratus/bdw_work/sims/V_DPA/irun.lnx8664.15.20.nc/ws47_17139/ncsim.args
+        +hubSetOption+libdef=bdw_work/sims/V_DPA/sim_V_DPA.so
+        +hubSetOption+bdr=bdw_work/sims/V_DPA/sim.bdr
+        +nc64bit
+        +incdir+/usr/cadtool/cadence/STRATUS/cur/tools.lnx86/stratus/lib
+        +incdir+bdw_work/wrappers
+        +access+rw
+        +loadpli1=/usr/cadtool/cadence/STRATUS/cur/tools.lnx86/stratus/lib/64bit/ncvlog_ssl:ssl_bootstrap
+        +ncinput+bdw_work/sims/V_DPA/ncverilog.do
+        +nclibdirname+bdw_work/sims/V_DPA
+        +libext+.v
+        +define+ioConfig
+        +define+BDW_RTL_unit1_DPA
+        +define+ioConfig
+        +define+BDW_RTL_unit2_DPA
+        +define+ioConfig
+        +define+BDW_RTL_unit3_DPA
+        +define+ioConfig
+        +define+BDW_RTL_unit4_DPA
+        +nowarn+LIBNOU
+        -INPUT bdw_work/sims/V_DPA/ncverilog.do
+        -NOWARN LIBNOU
+        -MESSAGES
+        +EMGRLOG bdw_work/sims/V_DPA/bdw_sim_verilog.log
+        -XLSTIME 1653657260
+        -XLKEEP
+        -XLMODE bdw_work/sims/V_DPA/irun.lnx8664.15.20.nc
+        -RUNMODE
+        -CDSLIB bdw_work/sims/V_DPA/irun.lnx8664.15.20.nc/cds.lib
+        -HDLVAR bdw_work/sims/V_DPA/irun.lnx8664.15.20.nc/hdl.var
+        -XLNAME irun
+        -XLVERSION TOOL:	irun(64)	15.20-s084
+        -XLNAME ./bdw_work/sims/V_DPA/irun.lnx8664.15.20.nc/ws47_17139
+    -CHECK_VERSION TOOL:	irun(64)	15.20-s084
+    -LOG_FD 4
+    -LOG_FD_NAME bdw_work/sims/V_DPA/bdw_sim_verilog.log
+    -cmdnopsim
+    -runlock /home/u107/u107061125/ee6470/final_syn/LU_para4/stratus/bdw_work/sims/V_DPA/irun.lnx8664.15.20.nc/.nclib.lock
+    -runscratch /home/u107/u107061125/ee6470/final_syn/LU_para4/stratus/bdw_work/sims/V_DPA/irun.lnx8664.15.20.nc/ws47_17139
+
+csi-ncsim - CSI: *F,INTERR: INTERNAL EXCEPTION
+Observed simulation time : 83550 NS + 0
+-----------------------------------------------------------------
+The tool has encountered an unexpected condition and must exit.
+Contact Cadence Design Systems customer support about this
+problem and provide enough information to help us reproduce it,
+including the logfile that contains this error message.
+  TOOL:	ncsim(64)	15.20-s084
+  HOSTNAME: ws47
+  OPERATING SYSTEM: Linux 3.10.0-1160.36.2.el7.x86_64 #1 SMP Wed Jul 21 11:57:15 UTC 2021 x86_64
+  MESSAGE: sv_fpehandler - user generated SIGFPE
+-----------------------------------------------------------------
+
+csi-ncsim - CSI: Cadence Support Investigation, recording details
+User Code in function: <unavailable> offset -65497
+User Code in function: <unavailable> offset -65536
+User Code in function: <unavailable> offset -65534
+csi-ncsim - CSI: investigation complete took 0.013 secs, send this file to Cadence Support
